@@ -1,44 +1,46 @@
-🏨 Espiransa Resort Management System (RMS)
-A modular, MVC-structured Room Reservation System built with Pure PHP and MySQL. This project is designed to manage hotel bookings, user authentication, and administrative tasks for Espiransa Resort.
+# 🏨 Espiransa Resort Management System (RMS)
 
-🚀 Project Overview
-This system allows guests to browse rooms and make reservations while providing administrators with tools to manage bookings. It utilizes a custom MVC (Model-View-Controller) architecture to ensure separation of concerns, security, and scalability.
+A modular, MVC-structured Room Reservation System built with **Pure PHP** and **MySQL**. This project is designed to manage hotel bookings, user authentication, and administrative tasks for **Espiransa Resort**.
 
-✨ Key Features
-User Roles: Separate views for Guests, Admins, and Authenticated Users.
+## 🚀 Project Overview
 
-Authentication: Secure Login and Registration system.
+This system allows guests to browse rooms and make reservations while providing administrators with tools to manage bookings. It utilizes a custom **MVC (Model-View-Controller)** architecture to ensure separation of concerns, security, and scalability.
 
-Room Management: Browse available rooms and view details.
+### ✨ Key Features
+* **User Roles:** Separate views for Guests, Admins, and Authenticated Users.
+* **Authentication:** Secure Login and Registration system.
+* **Room Management:** Browse available rooms and view details.
+* **MVC Architecture:** Clean codebase separating Logic (App), UI (Views), and Assets (Public).
 
-MVC Architecture: Clean codebase separating Logic (App), UI (Views), and Assets (Public).
+### 🛠️ Tech Stack
+* **Backend:** PHP (Object-Oriented, MVC Pattern)
+* **Database:** MySQL
+* **Frontend:** Bootstrap 5, HTML5, CSS3, JavaScript
+* **Server:** Apache (via XAMPP/WAMP/MAMP)
 
-🛠️ Tech Stack
-Backend: PHP (Object-Oriented, MVC Pattern)
+---
 
-Database: MySQL
+## ⚙️ Installation & Setup Guide
 
-Frontend: Bootstrap 5, HTML5, CSS3, JavaScript
-
-Server: Apache (via XAMPP/WAMP/MAMP)
-
-⚙️ Installation & Setup Guide
 Follow these steps to set up the project on your local machine.
 
-Prerequisites
-XAMPP (or WAMP/MAMP) installed.
+### Prerequisites
+* **XAMPP** (or WAMP/MAMP) installed.
+* **Git** installed.
 
-Git installed.
+### Step 1: Clone the Repository
+Open your terminal (Git Bash or CMD) and navigate to your server's root directory (usually `htdocs` for XAMPP).
 
-Step 1: Clone the Repository
-Open your terminal (Git Bash or CMD) and navigate to your server's root directory (usually htdocs for XAMPP).
-
-Bash
-
+``bash
 cd C:/xampp/htdocs
-git clone https://github.com/kayceelyoDev/EspiransaRms.git
+
+git clone [https://github.com/kayceelyoDev/EspiransaRms.git](https://github.com/kayceelyoDev/EspiransaRms.git)
+
+
 Step 2: Database Configuration
+
 Start Apache and MySQL in your XAMPP Control Panel.
+
 
 Open your browser and go to http://localhost/phpmyadmin.
 
