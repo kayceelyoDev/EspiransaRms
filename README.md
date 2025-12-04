@@ -59,13 +59,12 @@ Ensure your database credentials match your local setup:
 
 PHP
 
+```php
 // Example Configuration
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'room_reservation'); // Must match the DB you created
 define('DB_USER', 'root');             // Default XAMPP user
 define('DB_PASS', '');                 // Default XAMPP password is empty
-Step 4: Run the Project
-Because this project uses a strict MVC structure with a public entry point, you must access the public folder in your browser.
 
 Go to:
 
@@ -73,9 +72,11 @@ http://localhost/EspiransaRms/public/
 
 (Note: If you access just /EspiransaRms/, you will see a directory listing. You must click public to start the app.)
 
-📂 Project Structure
+## 📂 Project Structure
+
 We follow a custom MVC pattern to keep the code organized:
 
+```text
 EspiransaRms/
 ├── app/                  🧠 Backend Logic
 │   ├── config/           # Database and App configuration
@@ -94,6 +95,7 @@ EspiransaRms/
 │
 ├── database_schema.sql   🗄️ SQL Import File
 └── README.md             📖 Documentation
+
 🤝 Contribution
 Fork the repository.
 
