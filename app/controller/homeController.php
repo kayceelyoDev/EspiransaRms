@@ -1,6 +1,6 @@
 <?php
+namespace App\Controller;
 
-require_once __DIR__ . '/../config/database.php';
 
 Class HomeController {
     public function index(){

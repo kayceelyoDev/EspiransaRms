@@ -1,5 +1,6 @@
 <?php
 // Ensure we are accessing this via the router
+use App\Config\Database;
 if (!defined('ACCESS_GRANTED')) {
     exit("Access Denied");
 }
@@ -117,7 +118,7 @@ $serverSoftware = $_SERVER['SERVER_SOFTWARE'];
                         </div>
 
                         <div class="mt-5">
-                            <a href="index.php?page=home" class="btn btn-primary px-4 py-2 rounded-pill">
+                            <a href="roomreservation/public/" class="btn btn-primary px-4 py-2 rounded-pill">
                                 &larr; Proceed to Application
                             </a>
                         </div>
@@ -154,8 +155,8 @@ $serverSoftware = $_SERVER['SERVER_SOFTWARE'];
                         </div>
 
                         <div class="mt-4">
-                            <a href="index.php?page=test_connection" class="btn btn-outline-danger px-4 rounded-pill me-2">Retry Connection</a>
-                            <a href="index.php?page=home" class="btn btn-secondary px-4 rounded-pill">Go Home</a>
+                            <a href="/test" class="btn btn-outline-danger px-4 rounded-pill me-2">Retry Connection</a>
+                            <a href="/" class="btn btn-secondary px-4 rounded-pill">Go Home</a>
                         </div>
                     <?php endif; ?>
 
