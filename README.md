@@ -73,9 +73,11 @@ http://localhost/EspiransaRms/public/
 
 (Note: If you access just /EspiransaRms/, you will see a directory listing. You must click public to start the app.)
 
-📂 Project Structure
+## 📂 Project Structure
+
 We follow a custom MVC pattern to keep the code organized:
 
+```text
 EspiransaRms/
 ├── app/                  🧠 Backend Logic
 │   ├── config/           # Database and App configuration
@@ -94,6 +96,7 @@ EspiransaRms/
 │
 ├── database_schema.sql   🗄️ SQL Import File
 └── README.md             📖 Documentation
+
 🤝 Contribution
 Fork the repository.
 
