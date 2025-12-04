@@ -1,0 +1,40 @@
+.hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1571896349842-6e53ce41e8f2?q=80&w=1920&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        height: 85vh; /* 85% of the screen height */
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: white;
+    }
+
+    .booking-bar {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        margin-top: -50px; /* Pulls it up into the hero slightly */
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Make the text inputs look cleaner */
+    .form-control {
+        border: 1px solid #eee;
+        padding: 12px;
+        background-color: #f8f9fa;
+    }
+    
+    .btn-resort {
+        background-color: #cda45e; /* Gold/Luxury color */
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        transition: 0.3s;
+    }
+    
+    .btn-resort:hover {
+        background-color: #b38b42;
+        color: white;
+    }

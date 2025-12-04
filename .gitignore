@@ -1,0 +1,6 @@
+/app/Config/config.php
+/vendor/
+/public/assets/uploads/
+.DS_Store
+Thumbs.db
+.vscode/
