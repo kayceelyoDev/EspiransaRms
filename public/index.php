@@ -13,7 +13,7 @@ require_once __DIR__ . '/../app/router/router.php';
 // --- Import Controllers ---
 // Add new controllers here as you create them
 require_once __DIR__ . '/../app/controller/homeController.php';
-
+require_once __DIR__ . '/../app/controller/test/test_config.php';
 
 // --- Init Router ---
 $router = new Router();
@@ -23,6 +23,7 @@ $router = new Router();
 // Public Pages
 $router->get('/',[HomeController::class, 'index']);
 
+$router->get('/test',[TestConfig::class,'test']);
 
 // --- Run Application ---
 $router->resolve();
