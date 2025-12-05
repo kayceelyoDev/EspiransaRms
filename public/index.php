@@ -50,9 +50,15 @@ $router = new Router();
 // --- Define Routes ---
 $router->get('/', [HomeController::class, 'index']);
 $router->get('/test', [test_config::class, 'test']);
+
+//auth route//
 $router->get('/login',[Login::class,'index']);
+$router->post('/loginUser', [Login::class,'login']);
+
 $router->get('/register',[Register::class, 'index']);
 $router->post('/regUser', [Register::class,'create']);
+
+
 // --- Run Application ---
 $router->resolve();
 ?>

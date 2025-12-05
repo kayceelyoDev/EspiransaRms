@@ -22,7 +22,7 @@
                                name="username" 
                                class="form-control bg-light border-0 py-2" 
                                value="<?= htmlspecialchars($old['username'] ?? '') ?>"
-                               placeholder="johndoe123">
+                               placeholder="Enter Username...">
                         <?php if (isset($errors['username'])): ?>
                             <div class="text-danger small mt-1"><?= $errors['username']; ?></div>
                         <?php endif; ?>
@@ -34,7 +34,7 @@
                                name="email" 
                                class="form-control bg-light border-0 py-2" 
                                value="<?= htmlspecialchars($old['email'] ?? '') ?>"
-                               placeholder="name@example.com">
+                               placeholder="Enter Email...">
                         <?php if (isset($errors['email'])): ?>
                             <div class="text-danger small mt-1"><?= $errors['email']; ?></div>
                         <?php endif; ?>
@@ -43,7 +43,8 @@
                     <div class="mb-3">
                         <label class="form-label fw-bold">Password</label>
                         <input type="password" 
-                               name="password" 
+                               name="password"
+                               placeholder="Enter Password..." 
                                class="form-control bg-light border-0 py-2">
                         <?php if (isset($errors['password'])): ?>
                             <div class="text-danger small mt-1"><?= $errors['password']; ?></div>
@@ -53,7 +54,8 @@
                     <div class="mb-4">
                         <label class="form-label fw-bold">Confirm password</label>
                         <input type="password" 
-                               name="confirmPassword" 
+                               name="confirmPassword"
+                               placeholder="Confirm your password..." 
                                class="form-control bg-light border-0 py-2">
                     </div>
 

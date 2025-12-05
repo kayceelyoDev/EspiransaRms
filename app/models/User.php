@@ -15,4 +15,11 @@
             ':password' => $password
         ]);
         }
+
+
+        public function findEmail($email){
+            $stmt = $this->pdo->prepare("SELECT user_id, email, password_hash FROM users WHERE email = :email ");
+            $stmt->execute([':email'=>$email]);
+            return  $stmt-> fetch();
+        }
     }

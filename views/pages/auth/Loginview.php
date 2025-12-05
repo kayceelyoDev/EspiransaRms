@@ -28,7 +28,7 @@
                                name="email" 
                                class="form-control bg-light border-0 py-2" 
                                value="<?= htmlspecialchars($old['email'] ?? '') ?>"
-                               placeholder="name@example.com">
+                               placeholder="Enter Email...">
                         <?php if (isset($errors['email'])): ?>
                             <div class="text-danger small mt-1"><?= $errors['email']; ?></div>
                         <?php endif; ?>
@@ -38,6 +38,7 @@
                         <label class="form-label fw-bold">Password</label>
                         <input type="password" 
                                name="password" 
+                               placeholder="Enter Password..."
                                class="form-control bg-light border-0 py-2">
                         <?php if (isset($errors['password'])): ?>
                             <div class="text-danger small mt-1"><?= $errors['password']; ?></div>
