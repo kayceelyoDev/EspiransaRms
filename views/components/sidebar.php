@@ -1,4 +1,19 @@
-<?php include __DIR__ . "/../layouts/header.php"?>
+<?php 
+include __DIR__ . "/../layouts/header.php";
+
+// 1. Get the current URL path (e.g., "/dashboard" or "/rooms")
+$current_route = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+// 2. Helper function to determine the class
+function getLinkClass($route, $link_path) {
+    // If the current URL matches the link path
+    if ($route === $link_path) {
+        return 'active text-white'; // Highlighted style
+    } else {
+        return 'text-white-50 hover-text-white'; // Dimmed/Inactive style
+    }
+}
+?>
 
 <div class="d-flex flex-column">
     
@@ -13,7 +28,9 @@
          tabindex="-1" 
          id="sidebarMenu" 
          aria-labelledby="sidebarMenuLabel" 
-         style="width: 300px; min-height: 100vh;"> <div class="offcanvas-header d-lg-none border-bottom border-secondary">
+         style="width: 300px; min-height: 100vh;">
+         
+        <div class="offcanvas-header d-lg-none border-bottom border-secondary">
             <h5 class="offcanvas-title fs-3 fw-bold" id="sidebarMenuLabel">Menu</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
         </div>
@@ -26,42 +43,42 @@
         <ul class="nav nav-pills flex-column mb-auto p-3 gap-2">
             
             <li class="nav-item">
-                <a href="#" class="nav-link active d-flex align-items-center fs-5 py-3 fw-semibold">
+                <a href="/dashboard" class="nav-link <?php echo getLinkClass($current_route, '/dashboard'); ?> d-flex align-items-center fs-5 py-3 fw-semibold">
                     <i class="bi bi-speedometer2 me-3 fs-4"></i>
                     Dashboard
                 </a>
             </li>
             
             <li class="nav-item">
-                <a href="#" class="nav-link text-white-50 hover-text-white d-flex align-items-center fs-5 py-3 fw-semibold">
+                <a href="/rooms" class="nav-link <?php echo getLinkClass($current_route, '/rooms'); ?> d-flex align-items-center fs-5 py-3 fw-semibold">
                     <i class="bi bi-door-open-fill me-3 fs-4"></i>
                     Rooms
                 </a>
             </li>
             
             <li class="nav-item">
-                <a href="#" class="nav-link text-white-50 d-flex align-items-center fs-5 py-3 fw-semibold">
+                <a href="/reservation" class="nav-link <?php echo getLinkClass($current_route, '/reservation'); ?> d-flex align-items-center fs-5 py-3 fw-semibold">
                     <i class="bi bi-calendar-check-fill me-3 fs-4"></i>
                     Reservation
                 </a>
             </li>
             
             <li class="nav-item">
-                <a href="#" class="nav-link text-white-50 d-flex align-items-center fs-5 py-3 fw-semibold">
+                <a href="/checkin" class="nav-link <?php echo getLinkClass($current_route, '/checkin'); ?> d-flex align-items-center fs-5 py-3 fw-semibold">
                     <i class="bi bi-box-arrow-in-right me-3 fs-4"></i>
                     Check In
                 </a>
             </li>
             
             <li class="nav-item">
-                <a href="#" class="nav-link text-white-50 d-flex align-items-center fs-5 py-3 fw-semibold">
+                <a href="/checkout" class="nav-link <?php echo getLinkClass($current_route, '/checkout'); ?> d-flex align-items-center fs-5 py-3 fw-semibold">
                     <i class="bi bi-box-arrow-right me-3 fs-4"></i>
                     Check Out
                 </a>
             </li>
             
             <li class="nav-item">
-                <a href="#" class="nav-link text-white-50 d-flex align-items-center fs-5 py-3 fw-semibold">
+                <a href="/logs" class="nav-link <?php echo getLinkClass($current_route, '/logs'); ?> d-flex align-items-center fs-5 py-3 fw-semibold">
                     <i class="bi bi-file-earmark-text-fill me-3 fs-4"></i>
                     Logs
                 </a>
@@ -70,7 +87,7 @@
             <hr class="text-secondary my-3">
 
             <li class="nav-item">
-                <a href="#" class="nav-link text-danger d-flex align-items-center fs-5 py-3 fw-semibold bg-danger bg-opacity-10">
+                <a href="/logout" class="nav-link text-danger d-flex align-items-center fs-5 py-3 fw-semibold bg-danger bg-opacity-10">
                     <i class="bi bi-power me-3 fs-4"></i>
                     Log Out
                 </a>
@@ -101,10 +118,6 @@
 </div>
 
 <style>
-    /* Optional helper to ensure hover effects work smoothly 
-       without writing a separate CSS file.
-       Bootstrap 5 handles most, but this ensures text turns white on hover.
-    */
     .nav-link.text-white-50:hover {
         color: #fff !important;
         background-color: rgba(255, 255, 255, 0.1);

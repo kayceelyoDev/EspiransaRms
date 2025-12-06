@@ -3,6 +3,7 @@
 use App\Controller\Auth\Register;
 use App\Controller\Auth\Login;
 use App\Controller\DashboardController;
+use App\Controller\RoomController;
 use App\Controller\test\test_config;
 use App\Controller\HomeController; 
 // public/index.php
@@ -61,7 +62,7 @@ $router->post('/regUser', [Register::class,'create']);
 
 //dashboard route//
 $router->get('/dashboard', [DashboardController::class, 'index']);
-
+$router->get('/rooms',[RoomController::class,'index']);
 // --- Run Application ---
 $router->resolve();
 ?>
