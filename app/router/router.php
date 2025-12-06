@@ -16,7 +16,7 @@ class Router {
 
     // Handle Request
     public function resolve() {
-        // 1. Get the full URL path (e.g., /room-reservation/public/home)
+        // 1. Get the full URL path (e.g., /roomreservation/public/home)
         $path = $_SERVER['REQUEST_URI'] ?? '/';
 
         // 2. Clean up query strings (remove ?id=1, etc.)
