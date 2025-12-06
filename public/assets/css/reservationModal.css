@@ -1,0 +1,124 @@
+:root {
+        --bg-overlay: #0f172a;
+        --bg-card: #1e293b;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --accent-blue: #3b82f6;
+        --accent-blue-dim: rgba(59, 130, 246, 0.2);
+        --accent-red: #ef4444;
+        --border-color: #334155;
+    }
+
+    .modal-content {
+        background-color: var(--bg-overlay);
+        color: var(--text-primary);
+        border: 1px solid var(--border-color);
+    }
+
+    /* Input Fields */
+    .form-control {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+        padding: 0.75rem;
+    }
+    .form-control:focus {
+        background-color: #263345;
+        border-color: var(--accent-blue);
+        color: white;
+        box-shadow: none;
+    }
+    .form-control::placeholder { color: #64748b; }
+
+    /* Room Cards */
+    .room-card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .room-card:hover { border-color: var(--text-secondary); }
+    .room-card.selected {
+        border-color: var(--accent-blue);
+        background-color: var(--accent-blue-dim);
+    }
+    .room-icon {
+        background-color: #334155;
+        padding: 10px;
+        border-radius: 8px;
+        color: var(--accent-blue);
+        margin-right: 15px;
+    }
+    
+    /* Badges */
+    .badge-status { padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+    .badge-occupied { background-color: rgba(239, 68, 68, 0.2); color: var(--accent-red); }
+    .badge-available { background-color: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
+
+    /* Calendar Styling */
+    .calendar-wrapper {
+        background-color: var(--bg-card);
+        border-radius: 12px;
+        padding: 1.5rem;
+        height: 100%;
+    }
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+        margin-top: 10px;
+    }
+    .calendar-header-day {
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    .calendar-day {
+        background-color: #334155;
+        border-radius: 8px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--text-secondary);
+        transition: 0.2s;
+        user-select: none; /* Prevent text highlight on click */
+    }
+    .calendar-day:hover {
+        background-color: #475569;
+        color: white;
+    }
+    .calendar-day.empty { background-color: transparent; cursor: default; }
+
+    /* Calendar Range States */
+    .calendar-day.start-date, 
+    .calendar-day.end-date {
+        background-color: var(--accent-blue) !important;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    }
+    
+    .calendar-day.in-range {
+        background-color: var(--accent-blue-dim); /* Light semi-transparent blue */
+        color: white;
+    }
+
+    .btn-create {
+        background-color: white;
+        color: black;
+        font-weight: 700;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 8px;
+    }
+    .btn-create:hover { background-color: #e2e8f0; }

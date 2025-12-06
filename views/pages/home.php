@@ -21,8 +21,8 @@ include __DIR__ . "/../layouts/header.php";
             </ul>
 
             <div class="d-flex gap-2">
-                <a href="auth/Loginview.php" class="btn btn-link text-decoration-none text-dark fw-bold">Log in</a>
-                <a href="auth/Registerview.php" class="btn btn-dark rounded-pill px-4">Register</a>
+                <a href="/login" class="btn btn-link text-decoration-none text-dark fw-bold">Log in</a>
+                <a href="/register" class="btn btn-dark rounded-pill px-4">Register</a>
             </div>
         </div>
     </div>

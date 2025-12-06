@@ -2,6 +2,7 @@
 
 use App\Controller\Auth\Register;
 use App\Controller\Auth\Login;
+use App\Controller\DashboardController;
 use App\Controller\test\test_config;
 use App\Controller\HomeController; 
 // public/index.php
@@ -58,6 +59,8 @@ $router->post('/loginUser', [Login::class,'login']);
 $router->get('/register',[Register::class, 'index']);
 $router->post('/regUser', [Register::class,'create']);
 
+//dashboard route//
+$router->get('/dashboard', [DashboardController::class, 'index']);
 
 // --- Run Application ---
 $router->resolve();
